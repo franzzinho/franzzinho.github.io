@@ -20,7 +20,7 @@
         <h1>Benvenuto nel mio sito!</h1>
         <p>Qui troverai tutte le mie informazioni e i collegamenti ai miei social.</p>
         <div class="social-links">
-            <a href="https://instagram.com/tuo_account" target="_blank">Instagram</a>
+            <a href="instagram.com/franzzinho.real?igsh=MTNoYng1OGVxaGQ2cQ==
             <a href="https://facebook.com/tuo_account" target="_blank">Facebook</a>
             <a href="https://twitter.com/tuo_account" target="_blank">Twitter</a>
         </div>
