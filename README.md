@@ -32,19 +32,19 @@
         <div class="products">
             <div class="product">
                 <img src="maglietta1.jpg" alt="Maglietta 1">
-                <p>Maglietta 1 - €20</p>
+                <p>Maglietta 1 - €104</p>
                 <button>Acquista</button>
             </div>
             <div class="product">
                 <img src="maglietta2.jpg" alt="Maglietta 2">
-                <p>Maglietta 2 - €25</p>
+                <p>Maglietta 2 - €208</p>
                 <button>Acquista</button>
             </div>
         </div>
     </section>
 
     <footer>
-        <p>© 2025 - Il Tuo Nome. Tutti i diritti riservati.</p>
+        <p>© 2025 - SCANTOT NANO.</p>
     </footer>
 </body>
 </html>
