@@ -151,14 +151,14 @@
         <h2>FAQ</h2>
         <p>Risposte alle domande più frequenti:</p>
         <ul>
-            <li><strong>Come posso acquistare un prodotto?</strong> Puoi acquistarlo direttamente dalla sezione Shop.</li>
+            <li><strong>Sei davvero un GOAT?</strong> È KIARO, IO SONO IL CAMPO BRANCO DI TUTTI I BROSKYS CRAZY PAZZI.</li>
             <li><strong>Posso fare donazioni?</strong> Sì, cliccando sul link "Donazioni" nella sezione Home.</li>
             <li><strong>Dove posso ascoltare la tua musica?</strong> Su Spotify, il link è nella sezione Home.</li>
         </ul>
     </section>
 
     <footer>
-        <p>© 2025 - SCANTOT NANO.</p>
+        <p>© 2025 - Tutti i diritti sono riservati.</p>
         <img src="images/SFONDO_DESKTOP_SFERA.jpg" alt="Decorazione Footer">
     </footer>
 </body>
