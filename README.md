@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="it">
 <head>
     <meta charset="UTF-8">
@@ -13,12 +12,16 @@
             background-color: #f4f4f4;
         }
 
-        header {
-            background-color: #222;
+        .navbar {
+            background-color: #888;
             padding: 1rem 0;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
         }
 
-        nav ul {
+        .navbar ul {
             list-style: none;
             display: flex;
             justify-content: center;
@@ -27,15 +30,16 @@
             padding: 0;
         }
 
-        nav ul li a {
+        .navbar ul li a {
             color: #fff;
             text-decoration: none;
             font-size: 1.2rem;
+            font-weight: bold;
         }
 
         section {
             max-width: 1200px;
-            margin: 2rem auto;
+            margin: 5rem auto;
             padding: 1rem;
         }
 
@@ -44,7 +48,7 @@
         }
 
         #home img {
-            margin: 1rem 0;
+            margin: 2rem 0;
             border-radius: 10px;
             width: 80%;
             max-width: 800px;
@@ -62,32 +66,6 @@
             font-weight: bold;
         }
 
-        #merchandising {
-            text-align: center;
-        }
-
-        .products {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            margin-top: 2rem;
-            flex-wrap: wrap;
-        }
-
-        .product {
-            background-color: #fff;
-            border-radius: 10px;
-            padding: 1rem;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-            width: 200px;
-        }
-
-        .product img {
-            width: 100%;
-            border-radius: 10px;
-            margin-bottom: 1rem;
-        }
-
         footer {
             background-color: #222;
             color: #fff;
@@ -100,14 +78,36 @@
             margin-top: 10px;
             width: 50px;
         }
+
+        .hidden {
+            display: none;
+        }
     </style>
+    <script>
+        function showSection(sectionId) {
+            const sections = document.querySelectorAll('section');
+            sections.forEach(section => {
+                if (section.id === sectionId) {
+                    section.classList.remove('hidden');
+                } else {
+                    section.classList.add('hidden');
+                }
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            showSection('home'); // Mostra la home all'inizio
+        });
+    </script>
 </head>
 <body>
-    <header>
+    <header class="navbar">
         <nav>
             <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#merchandising">Merchandising</a></li>
+                <li><a href="#" onclick="showSection('home')">Home</a></li>
+                <li><a href="#" onclick="showSection('shop')">Shop</a></li>
+                <li><a href="#" onclick="showSection('about')">About</a></li>
+                <li><a href="#" onclick="showSection('faq')">FAQ</a></li>
             </ul>
         </nav>
     </header>
@@ -124,8 +124,8 @@
         </div>
     </section>
 
-    <section id="merchandising">
-        <h2>Merchandising</h2>
+    <section id="shop" class="hidden">
+        <h2>Shop</h2>
         <p>Acquista le mie magliette e altri prodotti qui!</p>
         <div class="products">
             <div class="product">
@@ -139,6 +139,22 @@
                 <button>Acquista</button>
             </div>
         </div>
+    </section>
+
+    <section id="about" class="hidden">
+        <h2>About</h2>
+        <p>Scopri di più su di me e sulla mia storia.</p>
+        <p>Mi chiamo Franzzinho e questo è il mio sito ufficiale per connettermi con i miei fan e supporter.</p>
+    </section>
+
+    <section id="faq" class="hidden">
+        <h2>FAQ</h2>
+        <p>Risposte alle domande più frequenti:</p>
+        <ul>
+            <li><strong>Come posso acquistare un prodotto?</strong> Puoi acquistarlo direttamente dalla sezione Shop.</li>
+            <li><strong>Posso fare donazioni?</strong> Sì, cliccando sul link "Donazioni" nella sezione Home.</li>
+            <li><strong>Dove posso ascoltare la tua musica?</strong> Su Spotify, il link è nella sezione Home.</li>
+        </ul>
     </section>
 
     <footer>
