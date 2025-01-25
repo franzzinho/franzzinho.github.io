@@ -16,6 +16,8 @@
             color: #fff;
         }
 
+        ![Image](https://github.com/user-attachments/assets/8a0d934b-84ad-40e3-a1dc-159354b8ceb6)
+
         .navbar {
             background-color: #222;
         }
