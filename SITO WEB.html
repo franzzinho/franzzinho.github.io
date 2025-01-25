@@ -1,16 +1,41 @@
-
 <html lang="it">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Il Tuo Sito</title>
-    <link rel="stylesheet" href="styles.css">
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
             background-color: #f4f4f4;
+        }
+
+        /* Barra grigia */
+        .top-bar {
+            background-color: #ccc;
+            padding: 1rem 0;
+            text-align: center;
+        }
+
+        .top-bar ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+        }
+
+        .top-bar ul li {
+            display: inline-block;
+        }
+
+        .top-bar ul li a {
+            text-decoration: none;
+            color: #000;
+            font-size: 1.2rem;
+            font-weight: bold;
         }
 
         header {
@@ -103,6 +128,16 @@
     </style>
 </head>
 <body>
+    <!-- Barra grigia con sezioni -->
+    <div class="top-bar">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#shop">Shop</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#faq">FAQ</a></li>
+        </ul>
+    </div>
+
     <header>
         <nav>
             <ul>
