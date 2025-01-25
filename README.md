@@ -3,332 +3,269 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Barra Navigazione</title>
+    <meta name="description" content="Benvenuto su Franzzinho - il miglior shop online con contenuti esclusivi e tanto altro!">
+    <meta name="keywords" content="Franzzinho, Shop, Video Exclusive, FAQ, GOAT">
+    <meta name="author" content="Franzzinho">
+    <title>Sito Web Professionale</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
+            font-family: 'Arial', sans-serif;
+            background-color: #333;
+            color: #fff;
         }
 
         .navbar {
-            background-color: #333;
-            color: #fff;
+            background-color: #222;
+        }
+
+        .navbar .nav-link {
+            color: #f39c12 !important;
+            margin-right: 1rem;
+            transition: color 0.3s;
+        }
+
+        .navbar .nav-link:hover {
+            color: #fff !important;
+        }
+
+        .hero {
+            background: url('hero.jpg') no-repeat center center/cover;
+            height: 60vh;
             display: flex;
+            justify-content: center;
             align-items: center;
-            justify-content: space-between;
-            padding: 0.5rem 1rem;
-            position: fixed;
-            top: 0;
-            width: 100%;
-            z-index: 1000;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-        }
-
-        .navbar-logo {
-            font-size: 1.5rem;
-            font-weight: bold;
             color: #fff;
+            text-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
         }
 
-        .navbar-logo img {
-            height: 40px;
-            margin-right: 10px;
+        .hero h1 {
+            font-size: 3rem;
         }
 
-        .navbar-menu {
-            display: flex;
-            align-items: center;
-            gap: 1.5rem;
+        .section {
+            padding: 4rem 2rem;
         }
 
-        .navbar-menu a {
-            color: #fff;
-            text-decoration: none;
-            font-size: 1rem;
-            font-weight: 500;
-            transition: color 0.3s ease;
-        }
-
-        .navbar-menu a:hover {
+        .section h2 {
+            margin-bottom: 2rem;
+            font-size: 2.5rem;
             color: #f39c12;
         }
 
-        .navbar-search {
-            flex: 1;
+        .video-exclusive {
             display: flex;
-            justify-content: center;
-        }
-
-        .navbar-search input {
-            width: 300px;
-            padding: 0.5rem;
-            border: none;
-            border-radius: 20px;
-            outline: none;
-            font-size: 1rem;
-            transition: box-shadow 0.3s ease;
-        }
-
-        .navbar-search input:focus {
-            box-shadow: 0 0 8px rgba(243, 156, 18, 0.5);
-        }
-
-        .navbar-actions {
-            display: flex;
-            align-items: center;
+            flex-wrap: wrap;
             gap: 1rem;
         }
 
-        .navbar-actions button,
-        .navbar-actions a {
-            background-color: #f39c12;
-            color: #fff;
-            border: none;
-            border-radius: 20px;
-            padding: 0.5rem 1rem;
-            font-size: 0.9rem;
-            font-weight: 500;
-            cursor: pointer;
-            text-decoration: none;
-            transition: background-color 0.3s ease;
-        }
-
-        .navbar-actions button:hover,
-        .navbar-actions a:hover {
-            background-color: #e67e22;
-        }
-
-        .navbar-actions a {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .navbar-actions a svg {
-            height: 20px;
-            width: 20px;
-        }
-
-        main {
-            margin-top: 60px;
-        }
-
-        section {
-            padding: 2rem;
-            min-height: 100vh;
-        }
-
-        .shop-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 1rem;
-        }
-
-        .product-card {
-            background: #fff;
-            border-radius: 10px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            padding: 1rem;
-            text-align: center;
-        }
-
-        .product-card img {
+        .video-exclusive video {
             max-width: 100%;
             border-radius: 10px;
-            margin-bottom: 1rem;
+            box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
         }
 
-        .product-card h3 {
-            font-size: 1.2rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .product-card p {
-            font-size: 0.9rem;
-            margin-bottom: 1rem;
-        }
-
-        .product-card button {
-            background-color: #f39c12;
+        footer {
+            background-color: #222;
             color: #fff;
-            border: none;
-            padding: 0.5rem 1rem;
-            border-radius: 20px;
-            cursor: pointer;
-            font-size: 0.9rem;
+            text-align: center;
+            padding: 1rem 0;
+            margin-top: 2rem;
         }
 
-        .product-card button:hover {
-            background-color: #e67e22;
+        footer a {
+            color: #f39c12;
+            text-decoration: none;
         }
 
-        .cart-counter {
-            position: relative;
-        }
-
-        .cart-counter::after {
-            content: attr(data-count);
-            position: absolute;
-            top: -10px;
-            right: -10px;
-            background: red;
+        .cart-badge {
+            background-color: #f39c12;
             color: white;
             border-radius: 50%;
             padding: 0.2rem 0.5rem;
             font-size: 0.8rem;
-            font-weight: bold;
+            position: relative;
+            top: -10px;
+            left: -10px;
         }
 
-        .faq-item {
-            margin-bottom: 1rem;
+        .lang-selector {
+            margin-left: 1rem;
+            background-color: #222;
+            color: #fff;
+            border: 1px solid #f39c12;
         }
 
-        .faq-item h4 {
-            margin: 0;
-            font-size: 1.1rem;
+        .btn-warning {
+            background-color: #f39c12;
+            border: none;
         }
 
-        .faq-item p {
-            margin: 0.5rem 0 0;
-            font-size: 0.9rem;
+        .btn-warning:hover {
+            background-color: #e67e22;
         }
 
-        ul {
-            list-style: none;
-            padding: 0;
+        .card {
+            background-color: #444;
+            color: #fff;
+            border: none;
         }
 
-        ul li {
-            margin-bottom: 0.5rem;
+        .card img {
+            border-radius: 10px;
+        }
+
+        .accordion-button {
+            background-color: #444;
+            color: #f39c12;
+        }
+
+        .accordion-button:not(.collapsed) {
+            background-color: #555;
+            color: #fff;
+        }
+
+        .accordion-body {
+            background-color: #333;
+            color: #fff;
         }
     </style>
 </head>
 <body>
-    <header class="navbar">
-        <div class="navbar-logo">
-            Franzzinho
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">Franzzinho</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#shop">Shop</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#video-exclusive">Video Exclusive</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#faq">FAQ</a>
+                    </li>
+                    <li class="nav-item">
+                        <select class="form-select lang-selector" aria-label="Lingua">
+                            <option value="it" selected>IT</option>
+                            <option value="en">EN</option>
+                        </select>
+                    </li>
+                </ul>
+            </div>
         </div>
-        <nav class="navbar-menu">
-            <a href="#home">Home</a>
-            <a href="#shop">Shop</a>
-            <a href="#biglietti">Biglietti Parchi</a>
-            <a href="#itinerari">Itinerari</a>
-            <a href="#about">About</a>
-            <a href="#faq">FAQ</a>
-        </nav>
-        <div class="navbar-search">
-            <input type="text" placeholder="Cerca...">
-        </div>
-        <div class="navbar-actions">
-            <a href="#accedi" class="login">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12H9m3 6V6" />
-                </svg>
-                Accedi
-            </a>
-            <a href="#carrello" class="cart cart-counter" data-count="0">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l1 5h13l1-5h2m-4 10h-6m-2 0H5m7 0h7m-7-5H5m1 5l-2 9h16l-2-9" />
-                </svg>
-                Carrello
-            </a>
-        </div>
+    </nav>
+
+    <header class="hero">
+        <h1>Benvenuto su Franzzinho</h1>
     </header>
+
     <main>
-        <section id="home">
-            <h1>Benvenuto nella Home!</h1>
-            <p>Seguici sui nostri social:</p>
-            <ul>
-                <li><a href="https://facebook.com">Facebook</a></li>
-                <li><a href="https://instagram.com">Instagram</a></li>
-                <li><a href="https://twitter.com">Twitter</a></li>
-            </ul>
+        <section id="about" class="section">
+            <div class="container">
+                <h2>Chi Siamo</h2>
+                <p>Franzzinho è il tuo punto di riferimento per articoli unici, contenuti esclusivi e tanto altro. Scopri il nostro shop e lasciati ispirare dai nostri video esclusivi. Siamo qui per offrirti il meglio!</p>
+            </div>
         </section>
-        <section id="shop">
-            <h2>Shop</h2>
-            <div class="shop-container">
-                <div class="product-card">
-                    <img src="maglietta.jpg" alt="Maglietta">
-                    <h3>Maglietta</h3>
-                    <p>€19.99</p>
-                    <button onclick="addToCart()">Aggiungi al Carrello</button>
-                </div>
-                <div class="product-card">
-                    <img src="felpa.jpg" alt="Felpa">
-                    <h3>Felpa</h3>
-                    <p>€39.99</p>
-                    <button onclick="addToCart()">Aggiungi al Carrello</button>
-                </div>
-                <div class="product-card">
-                    <img src="cappello.jpg" alt="Cappello">
-                    <h3>Cappello</h3>
-                    <p>€14.99</p>
-                    <button onclick="addToCart()">Aggiungi al Carrello</button>
-                </div>
-                <div class="product-card">
-                    <img src="portachiavi.jpg" alt="Portachiavi">
-                    <h3>Portachiavi</h3>
-                    <p>€9.99</p>
-                    <button onclick="addToCart()">Aggiungi al Carrello</button>
+
+        <section id="shop" class="section">
+            <div class="container">
+                <h2>Shop</h2>
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="card">
+                            <img src="maglietta.jpg" class="card-img-top" alt="Maglietta">
+                            <div class="card-body">
+                                <h5 class="card-title">Maglietta</h5>
+                                <p class="card-text">€19.99</p>
+                                <button class="btn btn-warning">Aggiungi al Carrello <span class="cart-badge">1</span></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card">
+                            <img src="felpa.jpg" class="card-img-top" alt="Felpa">
+                            <div class="card-body">
+                                <h5 class="card-title">Felpa</h5>
+                                <p class="card-text">€39.99</p>
+                                <button class="btn btn-warning">Aggiungi al Carrello</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card">
+                            <img src="cappello.jpg" class="card-img-top" alt="Cappello">
+                            <div class="card-body">
+                                <h5 class="card-title">Cappello</h5>
+                                <p class="card-text">€14.99</p>
+                                <button class="btn btn-warning">Aggiungi al Carrello</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card">
+                            <img src="portachiavi.jpg" class="card-img-top" alt="Portachiavi">
+                            <div class="card-body">
+                                <h5 class="card-title">Portachiavi</h5>
+                                <p class="card-text">€9.99</p>
+                                <button class="btn btn-warning">Aggiungi al Carrello</button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
-        <section id="faq">
-            <h2>FAQ</h2>
-            <div class="faq-section">
-                <div class="faq-item">
-                    <h4>Sei davvero un GOAT?</h4>
-                    <p>È KIARO, IO SONO IL CAMPO BRANCO DI TUTTI I BROSKYS CRAZY PAZZI.</p>
+
+        <section id="video-exclusive" class="section">
+            <div class="container">
+                <h2>Video Exclusive</h2>
+                <div class="video-exclusive">
+                    <video controls>
+                        <source src="video1.mp4" type="video/mp4">
+                        Il tuo browser non supporta il tag video.
+                    </video>
+                    <video controls>
+                        <source src="video2.mp4" type="video/mp4">
+                        Il tuo browser non supporta il tag video.
+                    </video>
                 </div>
-                <div class="faq-item">
-                    <h4>Posso fare donazioni?</h4>
-                    <p>Sì, cliccando sul link "Donazioni" nella sezione Home.</p>
-                </div>
-                <div class="faq-item">
-                    <h4>Dove posso ascoltare la tua musica?</h4>
-                    <p>Su Spotify, il link è nella sezione Home.</p>
-                </div>
-                <div class="faq-item">
-                    <h4>Posso contattarti direttamente?</h4>
-                    <p>Certo, tramite la sezione Contatti nella homepage.</p>
-                </div>
-                <div class="faq-item">
-                    <h4>Organizzi eventi?</h4>
-                    <p>Sì, puoi trovare i dettagli nella sezione Eventi.</p>
-                </div>
-                <div class="faq-item">
-                    <h4>Posso collaborare con te?</h4>
-                    <p>Sì, inviami un'email tramite la pagina Collaborazioni.</p>
-                </div>
-                <div class="faq-item">
-                    <h4>Ci sono promozioni attive?</h4>
-                    <p>Controlla nella sezione Shop per le ultime offerte.</p>
-                </div>
-                <div class="faq-item">
-                    <h4>Offri spedizioni internazionali?</h4>
-                    <p>Sì, spediamo in tutto il mondo.</p>
-                </div>
-                <div class="faq-item">
-                    <h4>Come posso seguire le tue news?</h4>
-                    <p>Iscriviti alla newsletter nella homepage.</p>
-                </div>
-                <div class="faq-item">
-                    <h4>Posso restituire un prodotto?</h4>
-                    <p>Sì, leggi la nostra politica di reso nella sezione Shop.</p>
+            </div>
+        </section>
+
+        <section id="faq" class="section">
+            <div class="container">
+                <h2>FAQ</h2>
+                <div class="accordion" id="faqAccordion">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingOne">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+                                Sei davvero un GOAT?
+                            </button>
+                        </h2>
+                        <div id="collapseOne" class="accordion-collapse collapse">
+                            <div class="accordion-body">
+                                È KIARO, IO SONO IL CAMPO BRANCO DI TUTTI I BROSKYS CRAZY PAZZI.
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Altre FAQ qui -->
                 </div>
             </div>
         </section>
     </main>
-    <script>
-        let cartCount = 0;
 
-        function addToCart() {
-            cartCount++;
-            document.querySelector('.cart-counter').setAttribute('data-count', cartCount);
-        }
-    </script>
+    <footer>
+        <p>© 2025 Franzzinho. Tutti i diritti riservati. <a href="#">Privacy</a> | <a href="#">Termini</a></p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
