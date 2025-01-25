@@ -28,6 +28,23 @@
     </section>
 
     <section id="merchandising">
+    <section id="merchandising">
+    <h2>Merchandising</h2>
+    <p>Acquista le mie magliette e altri prodotti qui!</p>
+    <div class="products">
+        <div class="product">
+            <img src="images/SFONDO_DESKTOP_2.jpg" alt="Prodotto 1">
+            <p>Prodotto 1 - €100</p>
+            <button>Acquista</button>
+        </div>
+        <div class="product">
+            <img src="images/SFONDO_DESKTOP_3.jpg" alt="Prodotto 2">
+            <p>Prodotto 2 - €200</p>
+            <button>Acquista</button>
+        </div>
+    </div>
+</section>
+
         <h2>Merchandising</h2>
         <p>Acquista le mie magliette e altri prodotti qui!</p>
         <div class="products">
