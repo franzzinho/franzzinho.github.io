@@ -112,11 +112,19 @@
             width: 20px;
         }
 
+        main {
+            margin-top: 60px;
+        }
+
+        section {
+            padding: 2rem;
+            min-height: 100vh;
+        }
+
         .shop-container {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 1rem;
-            padding: 2rem;
         }
 
         .product-card {
@@ -174,10 +182,6 @@
             font-weight: bold;
         }
 
-        .faq-section {
-            padding: 2rem;
-        }
-
         .faq-item {
             margin-bottom: 1rem;
         }
@@ -190,6 +194,15 @@
         .faq-item p {
             margin: 0.5rem 0 0;
             font-size: 0.9rem;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        ul li {
+            margin-bottom: 0.5rem;
         }
     </style>
 </head>
@@ -234,72 +247,78 @@
                 <li><a href="https://twitter.com">Twitter</a></li>
             </ul>
         </section>
-        <section id="shop" class="shop-container">
-            <div class="product-card">
-                <img src="maglietta.jpg" alt="Maglietta">
-                <h3>Maglietta</h3>
-                <p>€19.99</p>
-                <button onclick="addToCart()">Aggiungi al Carrello</button>
-            </div>
-            <div class="product-card">
-                <img src="felpa.jpg" alt="Felpa">
-                <h3>Felpa</h3>
-                <p>€39.99</p>
-                <button onclick="addToCart()">Aggiungi al Carrello</button>
-            </div>
-            <div class="product-card">
-                <img src="cappello.jpg" alt="Cappello">
-                <h3>Cappello</h3>
-                <p>€14.99</p>
-                <button onclick="addToCart()">Aggiungi al Carrello</button>
-            </div>
-            <div class="product-card">
-                <img src="portachiavi.jpg" alt="Portachiavi">
-                <h3>Portachiavi</h3>
-                <p>€9.99</p>
-                <button onclick="addToCart()">Aggiungi al Carrello</button>
+        <section id="shop">
+            <h2>Shop</h2>
+            <div class="shop-container">
+                <div class="product-card">
+                    <img src="maglietta.jpg" alt="Maglietta">
+                    <h3>Maglietta</h3>
+                    <p>€19.99</p>
+                    <button onclick="addToCart()">Aggiungi al Carrello</button>
+                </div>
+                <div class="product-card">
+                    <img src="felpa.jpg" alt="Felpa">
+                    <h3>Felpa</h3>
+                    <p>€39.99</p>
+                    <button onclick="addToCart()">Aggiungi al Carrello</button>
+                </div>
+                <div class="product-card">
+                    <img src="cappello.jpg" alt="Cappello">
+                    <h3>Cappello</h3>
+                    <p>€14.99</p>
+                    <button onclick="addToCart()">Aggiungi al Carrello</button>
+                </div>
+                <div class="product-card">
+                    <img src="portachiavi.jpg" alt="Portachiavi">
+                    <h3>Portachiavi</h3>
+                    <p>€9.99</p>
+                    <button onclick="addToCart()">Aggiungi al Carrello</button>
+                </div>
             </div>
         </section>
-        <section id="faq" class="faq-section">
-            <div class="faq-item">
-                <h4>Sei davvero un GOAT?</h4>
-                <p>È KIARO, IO SONO IL CAMPO BRANCO DI TUTTI I BROSKYS CRAZY PAZZI.</p>
-            </div>
-            <div class="faq-item">
-                <h4>Posso fare donazioni?</h4>
-                <p>Sì, cliccando sul link "Donazioni" nella sezione Home.</p>
-            </div>
-            <div class="faq-item">
-                <h4>Dove posso ascoltare la tua musica?</h4>
-                <p>Su Spotify, il link è nella sezione Home.</p>
-            </div>
-            <div class="faq-item">
-                <h4>Posso contattarti direttamente?</h4>
-                <p>Certo, tramite la sezione Contatti nella homepage.</p>
-            </div>
-            <div class="faq-item">
-                <h4>Organizzi eventi?</h4>
-                <p>Sì, puoi trovare i dettagli nella sezione Eventi.</p>
-            </div>
-            <div class="faq-item">
-                <h4>Posso collaborare con te?</h4>
-                <p>Sì, inviami un'email tramite la pagina Collaborazioni.</p>
-            </div>
-            <div class="faq-item">
-                <h4>Ci sono promozioni attive?</h4>
-                <p>Controlla nella sezione Shop per le ultime offerte.</p>
-            </div>
-            <div class="faq-item">
-                <h4>Offri spedizioni internazionali?</h4>
-                <p>Sì, spediamo in tutto il mondo.</p>
-            </div>
-            <div class="faq-item">
-                <h4>Come posso seguire le tue news?</h4>
-                <p>Iscriviti alla newsletter nella homepage.</p>
-            </div>
-            <div class="faq-item">
-                <h4>Posso restituire un prodotto?</h4>
-                <p>Sì, leggi la nostra politica di reso nella sezione Shop.</p>
+        <section id="faq">
+            <h2>FAQ</h2>
+            <div class="faq-section">
+                <div class="faq-item">
+                    <h4>Sei davvero un GOAT?</h4>
+                    <p>È KIARO, IO SONO IL CAMPO BRANCO DI TUTTI I BROSKYS CRAZY PAZZI.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>Posso fare donazioni?</h4>
+                    <p>Sì, cliccando sul link "Donazioni" nella sezione Home.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>Dove posso ascoltare la tua musica?</h4>
+                    <p>Su Spotify, il link è nella sezione Home.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>Posso contattarti direttamente?</h4>
+                    <p>Certo, tramite la sezione Contatti nella homepage.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>Organizzi eventi?</h4>
+                    <p>Sì, puoi trovare i dettagli nella sezione Eventi.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>Posso collaborare con te?</h4>
+                    <p>Sì, inviami un'email tramite la pagina Collaborazioni.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>Ci sono promozioni attive?</h4>
+                    <p>Controlla nella sezione Shop per le ultime offerte.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>Offri spedizioni internazionali?</h4>
+                    <p>Sì, spediamo in tutto il mondo.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>Come posso seguire le tue news?</h4>
+                    <p>Iscriviti alla newsletter nella homepage.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>Posso restituire un prodotto?</h4>
+                    <p>Sì, leggi la nostra politica di reso nella sezione Shop.</p>
+                </div>
             </div>
         </section>
     </main>
