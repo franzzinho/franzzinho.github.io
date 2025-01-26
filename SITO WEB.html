@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Benvenuto nel mio sito! Scopri i miei progetti, prodotti esclusivi e collegamenti social.">
+    <meta name="keywords" content="progetti, merchandising, social, video, donazioni">
+    <meta name="author" content="Franzzinho">
     <title>Il Tuo Sito</title>
     <style>
         body {
@@ -15,7 +18,6 @@
 
         .top-bar {
             background-color: #2d2d2d;
-            color: white;
             padding: 1rem 0;
             text-align: center;
         }
@@ -29,15 +31,16 @@
             gap: 2rem;
         }
 
-        .top-bar ul li {
-            display: inline-block;
-        }
-
         .top-bar ul li a {
             text-decoration: none;
-            color: white;
+            color: orange;
             font-size: 1.2rem;
             font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        .top-bar ul li a:hover {
+            color: #ff6600;
         }
 
         header {
@@ -55,21 +58,6 @@
         header p {
             color: #ccc;
             font-size: 1.2rem;
-        }
-
-        nav ul {
-            list-style: none;
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            margin: 0;
-            padding: 0;
-        }
-
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-            font-size: 1.1rem;
         }
 
         section {
@@ -100,6 +88,7 @@
             font-size: 1.2rem;
             color: #0077b5;
             font-weight: bold;
+            transition: color 0.3s ease;
         }
 
         .social-links a:hover {
@@ -134,6 +123,68 @@
             transform: translateY(-10px);
         }
 
+        .product button {
+            background-color: orange;
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .product button:hover {
+            background-color: #ff6600;
+        }
+
+        .video-exclusive {
+            text-align: center;
+            padding: 2rem;
+            background: linear-gradient(to right, #f4f4f4, #e0e0e0);
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .video-gallery {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .video-gallery div {
+            position: relative;
+            max-width: 300px;
+            cursor: pointer;
+        }
+
+        .video-gallery img {
+            width: 100%;
+            border-radius: 10px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .video-gallery img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .video-gallery div:hover .play-button {
+            opacity: 1;
+        }
+
+        .play-button {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 3rem;
+            color: white;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
         footer {
             background-color: #111;
             color: #fff;
@@ -142,27 +193,13 @@
             margin-top: 2rem;
         }
 
-        footer img {
-            width: 60px;
-            margin-top: 10px;
-        }
-
-        #video {
-            text-align: center;
-            margin-top: 2rem;
-        }
-
-        #video iframe {
-            width: 80%;
-            max-width: 900px;
-            height: 500px;
-            border-radius: 10px;
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        footer p {
+            margin: 0;
+            font-size: 0.9rem;
         }
     </style>
 </head>
 <body>
-    <!-- Barra grigia con sezioni -->
     <div class="top-bar">
         <ul>
             <li><a href="#home">Home</a></li>
@@ -175,52 +212,47 @@
     <header>
         <h1>Benvenuto nel mio sito!</h1>
         <p>Scopri il mio mondo, i miei progetti e i miei prodotti.</p>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#merchandising">Merchandising</a></li>
-            </ul>
-        </nav>
     </header>
 
     <section id="home">
         <h2>Benvenuto!</h2>
         <p>Qui troverai tutte le informazioni più interessanti e i collegamenti ai miei social.</p>
-        <img src="images/SFONDO_DESKTOP_2.jpg" alt="Immagine di Benvenuto">
+        <img src="https://via.placeholder.com/900x500" alt="Immagine di Benvenuto">
         <div class="social-links">
-            <a href="https://instagram.com/franzzinho.real?igsh=MTNoYng1OGVxaGQ2cQ==" target="_blank">Instagram</a>
-            <a href="https://tiktok.com/@franzzinho.real?_t=8oTIcTP2vzN&_r=1" target="_blank">TikTok</a>
-            <a href="https://open.spotify.com/playlist/6FufeeFmX0VN1OkYH06zI7?si=8954cbd0a899" target="_blank">Spotify</a>
+            <a href="https://instagram.com/franzzinho.real" target="_blank">Instagram</a>
+            <a href="https://tiktok.com/@franzzinho.real" target="_blank">TikTok</a>
+            <a href="https://open.spotify.com/playlist/6FufeeFmX0VN1OkYH06zI7" target="_blank">Spotify</a>
             <a href="https://streamelements.com/franzzinho_tw/tip" target="_blank">Donazioni</a>
         </div>
     </section>
 
-    <section id="merchandising">
-        <h2>Merchandising</h2>
-        <p>Acquista i miei prodotti esclusivi!</p>
-        <div class="products">
-            <div class="product">
-                <img src="images/SFONDO_DESKTOP_SFERA.jpg" alt="Prodotto 1">
-                <p>Prodotto 1 - €100</p>
-                <button>Acquista</button>
+    <section class="video-exclusive">
+        <h2>Video Exclusive</h2>
+        <p>Scopri i miei video esclusivi e guarda direttamente dal sito!</p>
+        <div class="video-gallery">
+            <div>
+                <a href="https://www.youtube.com/watch?v=xkmWWCS_6iA" target="_blank">
+                    <img src="https://img.youtube.com/vi/xkmWWCS_6iA/maxresdefault.jpg" alt="Video 1">
+                    <div class="play-button">▶</div>
+                </a>
             </div>
-            <div class="product">
-                <img src="images/SFONDO_DESKTOP_3.jpg" alt="Prodotto 2">
-                <p>Prodotto 2 - €200</p>
-                <button>Acquista</button>
+            <div>
+                <a href="https://www.youtube.com/watch?v=b-9aOXZ9fgc" target="_blank">
+                    <img src="https://img.youtube.com/vi/b-9aOXZ9fgc/maxresdefault.jpg" alt="Video 2">
+                    <div class="play-button">▶</div>
+                </a>
+            </div>
+            <div>
+                <a href="https://www.youtube.com/watch?v=60oCVadLHSc" target="_blank">
+                    <img src="https://img.youtube.com/vi/60oCVadLHSc/maxresdefault.jpg" alt="Video 3">
+                    <div class="play-button">▶</div>
+                </a>
             </div>
         </div>
     </section>
 
-    <!-- Sezione Video -->
-    <section id="video">
-        <h2>Guarda il mio ultimo video</h2>
-        <iframe src="https://www.youtube.com/embed/xkmWWCS_6iA" title="Video YouTube" allowfullscreen></iframe>
-    </section>
-
     <footer>
-        <p>© 2025 - SCANTOT NANO.</p>
-        <img src="images/SFONDO_DESKTOP_SFERA.jpg" alt="Decorazione Footer">
+        <p>Tutti i diritti sono riservati.</p>
     </footer>
 </body>
 </html>
