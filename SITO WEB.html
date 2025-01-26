@@ -6,14 +6,16 @@
     <title>Il Tuo Sito</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
             background-color: #f4f4f4;
+            color: #333;
         }
 
         .top-bar {
-            background-color: #ccc;
+            background-color: #2d2d2d;
+            color: white;
             padding: 1rem 0;
             text-align: center;
         }
@@ -33,14 +35,26 @@
 
         .top-bar ul li a {
             text-decoration: none;
-            color: #000;
+            color: white;
             font-size: 1.2rem;
             font-weight: bold;
         }
 
         header {
-            background-color: #222;
+            background-color: #111;
             padding: 1rem 0;
+            text-align: center;
+        }
+
+        header h1 {
+            color: white;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        header p {
+            color: #ccc;
+            font-size: 1.2rem;
         }
 
         nav ul {
@@ -53,15 +67,15 @@
         }
 
         nav ul li a {
-            color: #fff;
+            color: white;
             text-decoration: none;
-            font-size: 1.2rem;
+            font-size: 1.1rem;
         }
 
         section {
             max-width: 1200px;
             margin: 2rem auto;
-            padding: 1rem;
+            padding: 2rem;
         }
 
         #home {
@@ -70,9 +84,10 @@
 
         #home img {
             margin: 1rem 0;
+            width: 90%;
+            max-width: 900px;
             border-radius: 10px;
-            width: 80%;
-            max-width: 800px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
         .social-links {
@@ -83,12 +98,12 @@
             margin: 0 10px;
             text-decoration: none;
             font-size: 1.2rem;
-            color: #222;
+            color: #0077b5;
             font-weight: bold;
         }
 
-        #merchandising {
-            text-align: center;
+        .social-links a:hover {
+            color: #005f8f;
         }
 
         .products {
@@ -102,9 +117,11 @@
         .product {
             background-color: #fff;
             border-radius: 10px;
-            padding: 1rem;
+            padding: 1.5rem;
             box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-            width: 200px;
+            width: 250px;
+            text-align: center;
+            transition: transform 0.3s ease;
         }
 
         .product img {
@@ -113,8 +130,12 @@
             margin-bottom: 1rem;
         }
 
+        .product:hover {
+            transform: translateY(-10px);
+        }
+
         footer {
-            background-color: #222;
+            background-color: #111;
             color: #fff;
             text-align: center;
             padding: 1rem 0;
@@ -122,8 +143,8 @@
         }
 
         footer img {
+            width: 60px;
             margin-top: 10px;
-            width: 50px;
         }
 
         #video {
@@ -133,11 +154,10 @@
 
         #video iframe {
             width: 80%;
-            max-width: 800px;
-            height: 450px;
+            max-width: 900px;
+            height: 500px;
             border-radius: 10px;
-            border: none;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
         }
     </style>
 </head>
@@ -153,6 +173,8 @@
     </div>
 
     <header>
+        <h1>Benvenuto nel mio sito!</h1>
+        <p>Scopri il mio mondo, i miei progetti e i miei prodotti.</p>
         <nav>
             <ul>
                 <li><a href="#home">Home</a></li>
@@ -162,8 +184,8 @@
     </header>
 
     <section id="home">
-        <h1>Benvenuto nel mio sito!</h1>
-        <p>Qui troverai tutte le mie informazioni e i collegamenti ai miei social.</p>
+        <h2>Benvenuto!</h2>
+        <p>Qui troverai tutte le informazioni più interessanti e i collegamenti ai miei social.</p>
         <img src="images/SFONDO_DESKTOP_2.jpg" alt="Immagine di Benvenuto">
         <div class="social-links">
             <a href="https://instagram.com/franzzinho.real?igsh=MTNoYng1OGVxaGQ2cQ==" target="_blank">Instagram</a>
@@ -175,7 +197,7 @@
 
     <section id="merchandising">
         <h2>Merchandising</h2>
-        <p>Acquista le mie magliette e altri prodotti qui!</p>
+        <p>Acquista i miei prodotti esclusivi!</p>
         <div class="products">
             <div class="product">
                 <img src="images/SFONDO_DESKTOP_SFERA.jpg" alt="Prodotto 1">
@@ -200,43 +222,5 @@
         <p>© 2025 - SCANTOT NANO.</p>
         <img src="images/SFONDO_DESKTOP_SFERA.jpg" alt="Decorazione Footer">
     </footer>
-
-    <!-- Script Snipcart -->
-    <script>
-        window.SnipcartSettings = {
-            publicApiKey: 'ZmQ2ZGZlOTEtMmZhYi00ODAyLWE4OWUtN2EwMzMxODU2ZDY5NjM4NzM0OTc3NDYxNjgyMTkz',
-            loadStrategy: 'on-user-interaction',
-        };
-
-        (() => {
-            var c, d;
-            (d = (c = window.SnipcartSettings).version) != null || (c.version = "3.0");
-            var s, S;
-            (S = (s = window.SnipcartSettings).timeoutDuration) != null || (s.timeoutDuration = 2750);
-            var l, p;
-            (p = (l = window.SnipcartSettings).domain) != null || (l.domain = "cdn.snipcart.com");
-            var w, u;
-            (u = (w = window.SnipcartSettings).protocol) != null || (w.protocol = "https");
-            var f = window.SnipcartSettings.version.includes("v3.0.0-ci") || window.SnipcartSettings.version != "3.0" && window.SnipcartSettings.version.localeCompare("3.4.0", void 0, {numeric: !0, sensitivity: "base"}) === -1, m = ["focus", "mouseover", "touchmove", "scroll", "keydown"];
-            window.LoadSnipcart = o;
-            document.readyState === "loading" ? document.addEventListener("DOMContentLoaded", r) : r();
-
-            function r() {
-                window.SnipcartSettings.loadStrategy ? window.SnipcartSettings.loadStrategy === "on-user-interaction" && (m.forEach(t => document.addEventListener(t, o)), setTimeout(o, window.SnipcartSettings.timeoutDuration)) : o();
-            }
-
-            var a = !1;
-            function o() {
-                if (a) return;
-                a = !0;
-                let t = document.getElementsByTagName("head")[0], e = document.querySelector("#snipcart"), i = document.querySelector(`src[src^="${window.SnipcartSettings.protocol}://${window.SnipcartSettings.domain}"][src$="snipcart.js"]`), n = document.querySelector(`link[href^="${window.SnipcartSettings.protocol}://${window.SnipcartSettings.domain}"][href$="snipcart.css"]`);
-                e || (e = document.createElement("div"), e.id = "snipcart", e.setAttribute("hidden", "true"), document.body.appendChild(e)), v(e), i || (i = document.createElement("script"), i.src = `${window.SnipcartSettings.protocol}://${window.SnipcartSettings.domain}/themes/v${window.SnipcartSettings.version}/default/snipcart.js`, i.async = !0, t.appendChild(i)), n || (n = document.createElement("link"), n.rel = "stylesheet", n.type = "text/css", n.href = `${window.SnipcartSettings.protocol}://${window.SnipcartSettings.domain}/themes/v${window.SnipcartSettings.version}/default/snipcart.css`, t.prepend(n)), m.forEach(g => document.removeEventListener(g, o));
-            }
-
-            function v(t) {
-                !f || (t.dataset.apiKey = window.SnipcartSettings.publicApiKey, window.SnipcartSettings.addProductBehavior && (t.dataset.configAddProductBehavior = window.SnipcartSettings.addProductBehavior), window.SnipcartSettings.modalStyle && (t.dataset.configModalStyle = window.SnipcartSettings.modalStyle), window.SnipcartSettings.currency && (t.dataset.currency = window.SnipcartSettings.currency), window.SnipcartSettings.templatesUrl && (t.dataset.templatesUrl = window.SnipcartSettings.templatesUrl));
-            }
-        })();
-    </script>
 </body>
 </html>
